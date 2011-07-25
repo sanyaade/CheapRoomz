@@ -1,0 +1,56 @@
+<ui:fragment
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    xmlns:p="http://primefaces.prime.com.tr/ui"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <style>
+        #SCR_Table{
+            font-size: 12px;
+        }       
+    </style>
+
+    <h2>Search Cheap Rooms</h2>
+    <h:form>
+        <table id="SCR_Table" class="SCR_Table">
+            <tr>
+                <td>
+                    <p class="label">Enter your destination</p>
+            <p:autoComplete value="#{searchPanaleManage.destination}"/>
+            </td>
+            <td>
+                <p class="label">Arrival date</p>
+
+            <p:calendar value="#{searchPanaleManage.arivalDate}" style="width:120px;" />
+
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="label">Number of nights</p>
+            <p:selectOneMenu value="#{searchPanaleManage.numberOfNight}">
+                <f:selectItem  itemValue="" itemLabel="Select one item" />
+            </p:selectOneMenu>
+            </td>
+            <td>
+                <p class="label">Number of guests</p>
+            <p:selectOneMenu value="#{searchPanaleManage.numberOfGuests}">
+                <f:selectItem  itemValue="" itemLabel="Select one item" />
+            </p:selectOneMenu>
+            </td>
+            </tr>
+            <tr>
+                <td>
+                    <p class="label">Accommodation Type</p>
+            <p:selectOneMenu value="#{searchPanaleManage.accommodationType}">
+                <f:selectItem  itemValue="" itemLabel="Select one item" />
+            </p:selectOneMenu>
+            </td>
+            <td class="SearchBtn">
+            <p:commandButton action="#{searchPanaleManage.search}" ajax="false" value="search"/>
+
+            </td>
+            </tr>
+        </table>
+    </h:form>
+</ui:fragment>

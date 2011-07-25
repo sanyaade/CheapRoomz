@@ -1,0 +1,136 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:p="http://primefaces.prime.com.tr/ui"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:h="http://java.sun.com/jsf/html">
+
+    <body>
+
+        <ui:composition template="./template/templatemain.xhtml">
+            <ui:define name="head">
+                <base target="" href="./resources/"/>
+            </ui:define>
+            <ui:define name="topMainContent">
+
+                <div class="SCR_Box br">
+                    <div class="bl">
+                        <div class="tr">
+                            <div class="tl">
+                                <ui:include src="ui/searchPanel.xhtml"/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="DescriptionBox">
+                    <div class="title"><div>WELCOME TO CHEAP ROOMS in LONDON</div></div>
+                    <p>There's a whole world of accommodation possibilities out there that I bet you never knew existed. You can save loads of money by renting private rooms and whole properties in central London - for as little as one night only!</p>
+                    <p>And we'll never charge you a booking fee, whether you're going for business, pleasure, or just a decent night's sleep.   And you can cancel up to 24 hours beforehand with no penalty.  Just book online using your debit or credit card - it couldn't be easier!</p>
+                </div>
+                <div class="clear"></div>
+
+            </ui:define>
+
+            <ui:define name="midelMainContent">
+
+                <div class="WhiteWrapper">
+                    <div class="FeaturedRoomsBox">
+                        <h2>Featured cheap rooms in London</h2>
+                        <div class="RDWrapper">
+                            <img src="images/samples/room1.jpg" />
+                            <p class="SubTitle"><strong>Lovely Twin Room</strong><br />(accommodates 2)<br />London</p>
+                            <p>&pound;15 per person, per night<br />Only 5km away</p>
+                            <p class="margin_top10"><input type="image" src="images/moreinfo_btn.jpg" /></p>
+                        </div>
+
+                        <div class="RDWrapper">
+                            <img src="images/samples/room2.jpg" />
+                            <p class="SubTitle"><strong>Superb Group/Family</strong><br />(accommodates 4)<br />London</p>
+                            <p>&pound;15 per person, per night<br />Only 5km away</p>
+                            <p class="margin_top10"><input type="image" src="images/moreinfo_btn.jpg" /></p>
+                        </div>
+
+                        <div class="RDWrapper">
+                            <img src="images/samples/room3.jpg" />
+                            <p class="SubTitle"><strong>Comfy and clean</strong><br />(accommodates 1)<br />Croydon</p>
+                            <p>&pound;12 per pad, per night<br />Only 6km away</p>
+                            <p class="margin_top10"><input type="image" src="images/moreinfo_btn.jpg" /></p>
+                        </div>
+                    </div>
+                    <div class="ImageSliderWrapper">
+
+                        <!--Content Block-->
+                        <div class="SlideContent">
+                            <div class="TopTitle">TOP GUEST RATED</div>
+                            <img src="images/samples/slide1.jpg" />
+                            <div class="DscrWrapper">
+                                <div class="DscrBoard_BG"></div>
+                                <div class="LeftSide">
+                                    <p class="SubTitle">7 Seasons Apartments</p>
+                                    <p>Budapset</p>
+                                </div>
+                                <div class="RightSide">
+                                    <p>Prices from <br /><span class="Currency">&pound;68.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Content Block End-->
+                        <!-- Repeat this as many as the number of images you have-->
+                        <div class="SlideContent" style="display:none;">
+                            <div class="TopTitle">TOP GUEST RATED2</div>
+                            <img src="images/samples/room1.jpg" />
+                            <div class="DscrWrapper">
+                                <div class="DscrBoard_BG"></div>
+                                <div class="LeftSide">
+                                    <p class="SubTitle">Title2</p>
+                                    <p>Description2</p>
+                                </div>
+                                <div class="RightSide">
+                                    <p>Prices from <br /><span class="Currency">&pound;88.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="SlideContent" style="display:none;">
+                            <div class="TopTitle">TOP GUEST RATED3</div>
+                            <img src="images/samples/room2.jpg" />
+                            <div class="DscrWrapper">
+                                <div class="DscrBoard_BG"></div>
+                                <div class="LeftSide">
+                                    <p class="SubTitle">Title3</p>
+                                    <p>Description3</p>
+                                </div>
+                                <div class="RightSide">
+                                    <p>Prices from <br /><span class="Currency">&pound;88.00</span></p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- End of Content-->
+                        <a href="javascript:void(0);" class="SlideLeft"></a>
+                        <a href="javascript:void(0);" class="SlideRight"></a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+                <div class="PO_Wrapper">
+                    <div class="LeftSide">
+                        <p><img src="images/tick.png" />Make money from your spare room or empty property</p>
+                        <p><img src="images/tick.png" />Advertise your room / property for free</p>
+                        <p><img src="images/tick.png" />Only pay 0.99p per night your property is rented</p>
+                    </div>
+                    <div class="RightSide">
+                        <p class="pink">No hidden charges!</p>
+                        <p class="margin_top10">Your property will be in DEMAND for the Olympics</p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+
+
+            </ui:define>
+
+        </ui:composition>
+
+    </body>
+</html>

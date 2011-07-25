@@ -1,0 +1,19 @@
+@charset "utf-8";
+/* CSS Document */
+img {behavior: url(css/resources/iepngfix.htc);}
+.Description_Box .title div{ display:inline; zoom:1; }
+.Description_Box .title { display:inline; zoom:1; }
+.SliderWrapper .SlideLeft {behavior: url(css/resources/iepngfix.htc);}
+.SliderWrapper .SlideRight {behavior: url(css/resources/iepngfix.htc);}
+.MYS_Box .MYS_Table img{ vertical-align:baseline;}
+.MYS_Box .MYS_Table img{ vertical-align:baseline;}
+.SliderBox .Bar .Slider { behavior: url(css/resources/iepngfix.htc); }
+
+.SearchResultsWrapper .SortByWrapper input {vertical-align:baseline;}
+.SearchResultsWrapper .SortByWrapper label {vertical-align:baseline;}
+
+.RoomDetailsWrapper h2 { zoom:1; display:inline; }
+.RoomDetailsWrapper .sd { zoom:1; display:inline; }
+
+.RoomDetailsWrapper .TabContent .ImageSliderWrapper .SlideLeft {zoom:1; display:inline;}
+.RoomDetailsWrapper .TabContent .ImageSliderWrapper .SlideRight {zoom:1; display:inline;}

@@ -1,0 +1,52 @@
+@charset "utf-8";
+/* CSS Document */
+
+.checkbox {
+	width: 26px;
+	height: 25px;
+	padding: 0 5px 0 0;
+	background: url(../images/cit/checkbox.png) no-repeat;
+	display: -moz-inline-box;
+	display: inline-block;
+	clear: left;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+* html .checkbox { display:inline; }  /* for IE 6 */
+* + html .checkbox { display:inline; }  /* for IE 7 */
+
+.radio {
+	width: 26px;
+	height: 25px;
+	padding: 0 5px 0 0;
+	background: url(../images/cit/radiobutton.png) no-repeat;
+	display: -moz-inline-box;
+	display: inline-block;
+	clear: left;
+	vertical-align:middle;
+	cursor:pointer;
+}
+
+* html .radio { display:inline; }  /* for IE 6 */
+* + html .radio { display:inline; }  /* for IE 7 */
+
+.select { 
+	background: #fff url(../images/cit/dropdown-bg.png) no-repeat 100% 50%;
+	border:1px solid #ccc;
+	padding: 0px 25px 0px 5px; 
+	overflow: hidden; 
+	width:205px; 
+	height:25px; 
+	font-size:16px; 
+	line-height:25px;
+	display: -moz-inline-box;
+	display: inline-block;
+	clear:left; 
+	display: -moz-inline-box;
+	display: inline-block;
+	position:absolute;
+}
+
+* html .select { display:inline; }  /* for IE 6 */
+* + html .select { display:inline; }  /* for IE 7 */

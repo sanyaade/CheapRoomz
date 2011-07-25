@@ -1,0 +1,157 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:p="http://primefaces.prime.com.tr/ui"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    template="./template/templatemain.xhtml"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="head">
+        <base target="" href="./resources/"/>
+        <script type="text/javascript" src="http://maps.google.com/maps/api/js?sensor=true"></script>
+        <script type="text/javascript">
+        </script>
+    </ui:define>
+    <ui:define name="topMainContent">
+
+        <div class="MYS_Box br">
+            <div class="bl">
+                <div class="tr">
+                    <div class="tl">
+                        <h2>Modify your search</h2>
+                        <h:form>
+                            <table class="MYS_Table">
+                                <tr>
+                                    <td>
+                                        <p class="label">Enter your destination</p>
+                                        <p:inputText id="itDestination" />
+                                        <p:watermark for="itDestination" value="attraction or postcode"/>
+                                    </td>
+                                    <td>
+                                        <p class="label">Arrival date</p>
+                                        <p:calendar/>
+                                        <p:watermark for="itDestination" value="Tues 5th June"/>
+                                    </td>
+                                    <td>
+                                        <p class="label">Nights</p>
+                                        <p:selectOneMenu />
+                                    </td>
+                                    <td>
+                                        <p class="label">Guests</p>
+                                        <p:selectOneMenu />
+                                    </td>
+                                    <td width="250">
+                                        <p class="label">Price</p>
+                                        <h:panelGrid columns="2">
+                                            <p:inputText id="txt5" />
+                                            <p:slider for="txt5"  />
+                                        </h:panelGrid>
+                                    </td>
+                                    <td valign="bottom"><input type="image" src="images/update_btn.jpg" /></td>
+                                </tr>
+                            </table>
+                        </h:form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </ui:define>
+
+    <ui:define name="midelMainContent">
+        <div class="WhiteWrapper">
+            <div class="SearchResultsWrapper">
+                <h2>Search results for cheap rooms in London near WC1X </h2>
+                <div class="GoogleMap">
+
+                    <p:gmap
+                        streetView="true"
+                        center="41.381542, 2.122893" zoom="10" type="HYBRID"
+                        style="width:800px;height:300px" />
+
+                </div>
+                <div class="RoomInfo">
+                    <h3>WCX1 Rooms</h3>
+                    <div class="fl">
+                        <p>
+                            <h:outputLabel value="21 June 2011 for 1 night"/>
+                        </p>
+                        <p>
+                            Showing
+                            <strong>
+                                <h:outputLabel value="415 of 415 hotels in WC1XHide Map"/>
+                            </strong>
+                        </p>
+                    </div>
+                    <div class="fr">
+                        <a href="#" class="HideMap">Hide Map</a>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="SortByWrapper">
+                    <div class="fl">
+                        <input type="radio" id="price" name="sortby" value="price" /><label for="price">Price</label>
+                        <input type="radio" id="guestrating" name="sortby" value="guestrating" /><label for="guestrating">Guest Rating</label>
+                        <input type="radio" id="distance" name="sortby" value="distance" /><label for="distance">Distance</label>
+                    </div>
+                    <div class="Pages"><a href="#">&lt;&lt;</a> Page <a href="#" class="selected">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>.....<a href="#">10</a><a href="#">&gt;&gt;</a></div>
+
+                </div>
+                <p:dataList  var="car"
+                             paginator="true" rows="5" effectSpeed="fast"
+                             paginatorTemplate="{PreviousPageLink} {CurrentPageReport} {NextPageLink} {RowsPerPageDropdown}"
+                             rowsPerPageTemplate="5,10,15">
+
+                    <p:column>
+                        <table border="1">
+                            <tbody>
+
+                                <tr class="grey">
+                                    <td class="img"><img src="images/samples/result_sample.jpg" /></td>
+                                    <td>Victoria</td>
+                                    <td>Zena</td>
+                                    <td>2.5</td>
+                                    <td><div class="Rating"><div class="Percent" style="width:20%"></div></div></td>
+                                    <td class="selected date">&pound;659.40</td>
+                                    <td class="date">&pound;386.40</td>
+                                    <td class="date">&pound;491.40</td>
+                                </tr>
+                                <tr>
+                                    <td class="img"><img src="images/samples/result_sample.jpg" /></td>
+                                    <td>Victoria</td>
+                                    <td>Zena</td>
+                                    <td>2.5</td>
+                                    <td><div class="Rating"><div class="Percent" style="width:60%;"></div></div></td>
+                                    <td class="selected date">&pound;659.40</td>
+                                    <td class="date">&pound;386.40</td>
+                                    <td class="date">&pound;491.40</td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+
+                    </p:column>
+                </p:dataList>
+
+
+                <table class="ResultTable">
+
+                    <tr>
+                        <th></th><th>Location</th><th>Host name</th><th>Distance</th><th>Guest Rating</th><th class="selected date">June<br />23rd</th><th class="date">June<br />24th</th><th class="date">June<br />25th</th>
+                    </tr>
+                    <tr class="Spacing">
+                        <td></td><td></td><td></td><td></td><td></td><td class="selected date"></td><td></td><td></td>
+                    </tr>
+
+
+                </table>
+                <div class="Pages"><a href="#">&lt;&lt;</a> Page <a href="#" class="selected">1</a> <a href="#">2</a> <a href="#">3</a> <a href="#">4</a>.....<a href="#">10</a><a href="#">&gt;&gt;</a></div>
+            </div>
+            <div class="AdsWrapper">
+                <img src="images/samples/ads.jpg"/>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </ui:define>
+
+</ui:composition>

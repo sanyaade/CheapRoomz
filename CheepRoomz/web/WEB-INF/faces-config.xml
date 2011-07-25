@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='UTF-8'?>
+
+<!-- =========== FULL CONFIGURATION FILE ================================== -->
+
+<faces-config version="2.0"
+    xmlns="http://java.sun.com/xml/ns/javaee" 
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-facesconfig_2_0.xsd">
+    <navigation-rule>
+        <from-view-id>/loginpage.xhtml</from-view-id>
+        <navigation-case>
+            <from-outcome>regsucsess</from-outcome>
+            <to-view-id>/clinetarea/clientpage.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+        <navigation-case>
+            <from-outcome>loginsuccsess</from-outcome>
+            <to-view-id>/clinetarea/clientpage.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+    <navigation-rule>
+        <from-view-id>/.*</from-view-id>
+        <navigation-case>
+            <from-outcome>loginsuccsess</from-outcome>
+            <to-view-id>/clinetarea/clientpage.xhtml</to-view-id>
+            <redirect/>
+        </navigation-case>
+    </navigation-rule>
+
+
+    <validator>
+        <validator-id>emailvalidator</validator-id>
+        <validator-class>com.duineth.cheeproomz.core.validators.UserNameValidator</validator-class>
+    </validator>
+</faces-config>

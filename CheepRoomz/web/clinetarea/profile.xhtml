@@ -1,0 +1,29 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./../template/clientTemplate.xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:p="http://primefaces.prime.com.tr/ui"
+                xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="head">
+        <base target="" href="../resources/"/>
+        <style type="text/css">
+            body{
+                font: 12px;
+            }
+        </style>
+    </ui:define>
+    <ui:define name="topMainContent">
+        <h:panelGrid columns="2">
+            <h:outputLabel value="All/Unread Messages"/>
+            <h:outputText value="0/0"/>
+        </h:panelGrid>
+
+        <h:outputLabel value="Next Journy"/>
+    </ui:define>
+
+    <ui:define name="midelMainContent">
+
+    </ui:define>
+
+</ui:composition>

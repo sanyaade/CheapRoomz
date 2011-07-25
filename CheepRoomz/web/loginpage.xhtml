@@ -1,0 +1,103 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition
+    xmlns="http://www.w3.org/1999/xhtml"
+    xmlns:ui="http://java.sun.com/jsf/facelets"
+    template="./template/templatemain.xhtml"
+    xmlns:p="http://primefaces.prime.com.tr/ui"
+    xmlns:h="http://java.sun.com/jsf/html"
+    xmlns:f="http://java.sun.com/jsf/core">
+    <ui:define name="head">
+        <base target="" href="./resources/"/>
+    </ui:define>
+    <ui:define name="topMainContent">
+
+    </ui:define>
+
+    <ui:define name="midelMainContent">
+        <h:form id="logPanel">
+            <h:panelGrid columns="3">
+                <h:outputLabel value="User Name"/>
+                <p:inputText id="itUName" value="#{ucLogin.userName}" maxlength="45"/>
+                <p:message for="itUName"/>
+
+                <h:outputLabel value="Password"/>
+                <p:password feedback="false" value="#{ucLogin.password}" id="itPassword"/>
+                <p:message for="itPassword"/>
+
+                <f:facet name="footer">
+                    <p:commandButton ajax="true" update="logPanel logErrorMsg" action="#{ucLogin.loginAuth}" value="Login"/>
+                    <p:messages autoUpdate="false" globalOnly="true" redisplay="true" id="logErrorMsg"/>
+                </f:facet>
+            </h:panelGrid>
+        </h:form>
+        <h:form  id="regForm">
+            <h:panelGrid columns="3">
+                <h:outputLabel value="Email "/>
+                <p:inputText id="itEmail"  value="#{ucRegistration.customer.email}"
+                             required="true" requiredMessage="Please enter email">
+                    <p:ajax event="blur" update="msgEmial"/>
+                    <f:validator validatorId="emailvalidator" />
+                </p:inputText>
+                <p:message id="msgEmial" for="itEmail"/>
+
+                <h:outputLabel value="Password "/>
+                <p:password id="itPassword"
+                            value="#{ucRegistration.logindata.password}"
+                            required="true" requiredMessage="Please enter Password"/>
+                <p:message for="itPassword"/>
+
+                <h:outputLabel value="Confirm Password "/>
+                <p:password feedback="false"  id="itCPassword"
+                            validator="#{ucRegistration.validateSamePassword}"
+                            required="true" requiredMessage="Please Confirm Password">
+                </p:password>
+                <p:message id="cpMsg" for="itCPassword"/>
+
+                <h:outputLabel value="First Name "/>
+                <p:inputText id="itFname" value="#{ucRegistration.customer.fname}"
+                             required="true" requiredMessage="Please enter your first name"/>
+                <p:message for="itFname"/>
+
+                <h:outputLabel value="Last Name "/>
+                <p:inputText id="itLname" value="#{ucRegistration.customer.lname}"
+                             required="true" requiredMessage="Please enter your last name"/>
+                <p:message for="itLname"/>
+
+                <h:outputLabel value="Contact Number "/>
+                <p:selectOneMenu id="somCountry" value="#{ucRegistration.customer.country}">
+                    <f:selectItem itemLabel="England (+123)" itemValue="England"/>
+                </p:selectOneMenu>
+                <p:message for="somCountry"/>
+
+                <h:outputLabel value="Contact Number "/>
+                <p:inputText id="itCnumber" value="#{ucRegistration.customer.contactNumber}"
+                             required="true" requiredMessage="Please enter your last name"/>
+                <p:message for="itCnumber"/>
+
+                <h:outputLabel value="Contact Number "/>
+                <p:inputText id="itCity" value="#{ucRegistration.customer.city}"
+                             required="true" requiredMessage="Please enter your last name"/>
+                <p:message for="itCity"/>
+
+
+                <h:outputLabel value="your gender "/>
+                <p:selectOneRadio id="sorGender" value="#{ucRegistration.customer.ismale}"
+                                  required="true" requiredMessage="Please enter email">
+                    <f:selectItem itemLabel="Femail" itemValue="#{false}" />
+                    <f:selectItem itemLabel="Mail" itemValue="#{true}" />
+                </p:selectOneRadio>
+                <p:message for="sorGender"/>
+
+                <p:selectBooleanCheckbox id="sbcAcceptTnC" label="Please accept Terms And Privacy" value="#{ucRegistration.userAcceptTNC}">
+                </p:selectBooleanCheckbox>
+                <p:message for="sbcAcceptTnC"/>
+
+                <f:facet name="footer">
+                    <p:commandButton value="Register" update="regForm" ajax="true" action="#{ucRegistration.registration}"/>
+                </f:facet>
+            </h:panelGrid>
+        </h:form>
+    </ui:define>
+
+</ui:composition>

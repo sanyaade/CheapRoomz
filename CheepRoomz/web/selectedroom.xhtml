@@ -1,0 +1,148 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE composition PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<ui:composition xmlns:ui="http://java.sun.com/jsf/facelets"
+                template="./template/templatemain.xhtml">
+    <ui:define name="head">
+        <base target="" href="./resources/"/>
+    </ui:define>
+    <ui:define name="topMainContent">
+        topMainContent
+    </ui:define>
+
+    <ui:define name="midelMainContent">
+        <div class="WhiteWrapper">
+            <div class="RoomDetailsWrapper">
+                <div class="SocialLinks">
+                    <div class="fl"><img src="images/icon_fav.png" /><a href="#">add to favourites</a></div>
+                    <div class="fr"><a href="#"><img src="images/fb_like.png" alt="FB Like" /></a></div>
+                    <div class="fl"><img src="images/icon_email.png" /><a href="#">send to a friend</a></div>
+                    <div class="fr"><a href="#"><img src="images/icon_tweet.png" alt="Tweet" /></a></div>
+                </div>
+                <h2>Room Details</h2>
+                <p class="sd">Accommodation in <a href="#">London</a>, <a href="#"><span>United Kingdom</span></a></p>
+                <ul class="tabs">
+                    <li id="overview_tab" class="selected"><a href="javascript:;" title="Overview">Overview</a></li>
+                    <li id="moreinfo_tab"><a href="javascript:;" title="More information">More information</a></li>
+                    <li id="map_tab"><a href="javascript:;" title="Map">Map</a></li>
+                    <li id="host_tab"><a href="javascript:;" title="The host">The host</a></li>
+                    <li id="reviews_tab"><a href="javascript:;" title="Reviews">Reviews</a></li>
+                </ul>
+                <div class="TabContent" id="overview">
+                    <div class="Details">
+                        <p><strong>Price: </strong><br />
+                            £20 per night based on single occupancy
+                        </p>
+                        <p><strong>Extra person:</strong><br />
+                            £10 per person
+                        </p>
+                        <p><strong>Payment:</strong><br />
+                            10% online deposit <br />
+                            Remainder cash on arrival
+                        </p>
+                        <p><strong>Accommodation Type:</strong><br />
+                            Room in private property
+                        </p>
+                        <p><strong>Sleeps: 1</strong></p>
+                        <p><strong>Location:</strong><br />
+                            Lewisham, London
+                        </p>
+                        <p><strong>User ratings:</strong><br />
+                            Newbie (?)
+                        </p>
+                    </div>
+                    <div class="ImageSliderWrapper">
+                        <div class="SlideContent">
+                            <img src="images/samples/room_details1.jpg" />
+                        </div>
+                        <div class="SlideContent" style="display:none">
+                            <img src="images/samples/room2.jpg" />
+                        </div>
+                        <div class="SlideContent" style="display:none">
+                            <img src="images/samples/room3.jpg" />
+                        </div>
+                        <p class="Nav">
+                            <a href="javascript:void(0);" class="SlideLeft"></a>
+                            <img src="images/samples/room_details1.jpg" />
+                            <img src="images/samples/room2.jpg" />
+                            <img src="images/samples/room3.jpg" />
+                            <a href="javascript:void(0);" class="SlideRight"></a>
+                        </p>
+                    </div>
+                    <div class="BookingWrapper">
+                        <h3>Nightly price: &pound;20</h3>
+                        <p><strong>Weekly:</strong> &pound;50</p>
+                        <p><strong>Monthly:</strong> &pound;200</p>
+                        <div class="Calendar">
+                            <p>
+                                <input type="button" value="<< back" class="MoveDay" />
+                                <span class="today">Today</span>
+                                <input type="button" value="next >>" class="MoveDay" />
+                            </p>
+                            <table>
+                                <tr>
+                                    <th class="Availability" colspan="7">Availablity: June 2011</th>
+                                </tr>
+                                <tr>
+                                    <th>Mo</th><th>Tu</th><th>We</th><th>Th</th><th>Fr</th><th>Sa</th><th>Su</th>
+                                </tr>
+                                <tr>
+                                    <td>30</td><td>31</td><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td>
+                                </tr>
+                                <tr>
+                                    <td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td>
+                                </tr>
+                                <tr>
+                                    <td>20</td><td>21</td><td>22</td><td>23</td><td>24</td><td>25</td><td>26</td>
+                                </tr>
+                                <tr>
+                                    <td>27</td><td>8</td><td>29</td><td>30</td><td>1</td><td>2</td><td>3</td>
+                                </tr>
+                            </table>
+                            <div class="state"><span class="available block"></span>Available</div>
+                            <div class="state"><span class="unavailable block"></span>Unavailable</div>
+                            <div class="clear"></div>
+                        </div>
+                        <table class="left">
+                            <tr>
+                                <td class="right">Check in:</td>
+                                <td><input type="text" class="text" value="22/06/2011" /></td>
+                            </tr>
+                            <tr>
+                                <td class="right">Check out:</td>
+                                <td><input type="text" class="text" value="30/06/2011" /></td>
+                            </tr>
+                            <tr>
+                                <td class="right">Guests:</td>
+                                <td>
+                                    <select name="guests" class="styled dropdown">
+                                        <option value="1">1</option>
+                                        <option value="2">2</option>
+                                        <option value="3">3</option>
+                                    </select>
+                                </td>
+                            </tr>
+                        </table>
+                        <p><input type="image" src="images/booknow.png" /></p>
+                        <p><a href="#">How booking works &gt;&gt;</a></p>
+                    </div>
+                    <div class="clear"></div>
+                </div>
+                <div class="TabContent" id="moreinfo" style="display:none">
+                </div>
+                <div class="TabContent" id="map" style="display:none">
+                </div>
+                <div class="TabContent" id="host" style="display:none">
+                </div>
+                <div class="TabContent" id="reviews" style="display:none">
+                </div>
+
+            </div>
+            <div class="clear"></div>
+        </div>
+
+    </ui:define>
+
+</ui:composition>
